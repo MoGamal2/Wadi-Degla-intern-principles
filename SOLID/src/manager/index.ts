@@ -3,13 +3,15 @@ import IManager from "./type";
 import { Club } from "../clubs";
 class ClubManager implements IManager {
   contactInfo: ContactInfo;
+  club: Club;
 
-  constructor(contactInfo: ContactInfo) {
+  constructor(contactInfo: ContactInfo,club: Club) {
+    this.club = club;
     this.contactInfo = contactInfo;
   }
 
-  getClubInfo(club: Club){
-     club.printClubInfo
+  getClubInfo(){
+     this.club.printClubInfo();
   }
 }
 
